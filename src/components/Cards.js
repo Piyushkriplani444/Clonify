@@ -1,10 +1,4 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 const Data = [
   {
@@ -37,54 +31,33 @@ const Data = [
   },
 ];
 
-const card = (data) => {
+const SingleCard = ({ heading, value, profit, loss, info }) => {
+  // const { user } = useContext(UserContext);
   return (
-    <React.Fragment>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {data?.heading}
-        </Typography>
-        <Typography variant="h5" sx={{ mb: 3.5 }} component="div">
-          {data?.value}
-        </Typography>
-        {data?.profit > 0 && (
-          <Typography sx={{ mb: 1.5, fontSize: 5 }} color="green">
-            <p>{data?.profit} %</p>
-          </Typography>
+    <div className="w-64 h-40 m-2 p-4 shadow-lg bg-white">
+      <h2 className="font-bold text-base">{heading}</h2>
+      <h3 className="font-bold text-2xl pb-7">{value}</h3>
+      <div className="flex flex-wrap">
+        {profit > 0 && (
+          <h4 className="bg-green-300 rounded-full font-red px-2 m-2">
+            +{profit}%{" "}
+          </h4>
         )}
-        {data?.loss > 0 && (
-          <Typography sx={{ mb: 1.5, fontSize: 5 }} color="red">
-            <p>{data?.loss} %</p>
-          </Typography>
+        {loss < 0 && (
+          <h4 className="bg-red-300 rounded-full font-red px-2 m-2">{loss}%</h4>
         )}
-        {data?.info > 0 && (
-          <Typography sx={{ mb: 1.5, fontSize: 5 }} color="text.secondary">
-            <p>From {data?.info} %</p>
-          </Typography>
-        )}
-      </CardContent>
-    </React.Fragment>
+        {info > 0 && <h4 className="px-2 m-2">From {info}%</h4>}
+      </div>
+    </div>
   );
 };
 
 export default function Card() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-
-        p: 5,
-        m: 5,
-        justifyContent: "space-around",
-
-        minWidth: 275,
-      }}
-    >
+    <div className="flex flex-wrap">
       {Data.map((data) => {
-        return <Card variant="outlined">{card(data)}</Card>;
+        return <SingleCard {...data} />;
       })}
-    </Box>
+    </div>
   );
 }

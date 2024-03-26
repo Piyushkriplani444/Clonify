@@ -1,5 +1,3 @@
-import { TextField } from "@mui/material";
-import { LineChart } from "@mui/x-charts/LineChart";
 const Footer = () => {
   return (
     <div>
