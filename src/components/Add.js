@@ -1,6 +1,6 @@
 const Add = () => {
   return (
-    <div className="shadow-lg  m-2 p-10 bg-black  rounded-lg flex flex-row flex-wrap justify-between">
+    <div className="shadow-lg  m-2 p-10 bg-black  rounded-lg  flex-row flex-wrap justify-between inline-flex">
       <div className="flex flex-col">
         <h1 className="text-white text-2xl font-bold">Unlock premium Stats</h1>
         <h5 className="text-white text-md font-thin pt-6">

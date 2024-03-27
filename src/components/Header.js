@@ -4,19 +4,12 @@ import notification from "../assets/img/notification.png";
 import date from "../assets/img/date-icon.png";
 import photo from "../assets/img/photo.svg";
 
-const Title = () => (
-  <a href="/">
-    <img className="h-28  p-4" width={200} alt="logo" src={logo} />
-  </a>
-);
-
 const Header = () => {
   return (
-    <div className="flex justify-between w-[100%] bg-white shadow-lg 0">
-      <Title />
+    <header className="h-[120px] pl-8 pr-[31px] py-2.5 flex justify-between w-[100%] bg-white shadow-lg 0">
       <InputSearch />
-      <div className="nav-items">
-        <ul className="flex  py-10">
+      <div className="nav-items mt-3">
+        <ul className="flex  ">
           <li className="px-2 w-20">
             <img src={notification} alt="Notification" width={40} />
           </li>
@@ -28,7 +21,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -2,7 +2,7 @@ import search from "../assets/img/search.png";
 
 const InputSearch = () => {
   return (
-    <div className="w-4/5 h-10  mt-10 bg-white rounded-md border border-gray-200 justify-start items-center gap-2 inline-flex">
+    <div className="w-4/5 h-10  mt-3 bg-white rounded-md border border-gray-200 justify-start items-center gap-2 inline-flex">
       <div className="grow shrink basis-0 h-[22px] justify-start items-center gap-2 flex">
         <img className="w-4 h-3" src={search} alt="" />
         <input

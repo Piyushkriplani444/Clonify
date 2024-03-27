@@ -5,12 +5,18 @@ import Footer from "./components/Footer";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Sidebar from "./components/SideBar";
 
 const AppLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
+      <div className="flex h-screen ">
+        <Sidebar />
+        <div className="flex flex-col flex-grow ">
+          <Header />
+          <Outlet />
+        </div>
+      </div>
       <Footer />
     </>
   );
