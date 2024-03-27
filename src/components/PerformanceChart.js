@@ -57,7 +57,7 @@ const data = [
 
 export default function PerformanceChart() {
   return (
-    <div className="shadow-lg  m-2 p-10 ">
+    <div className="shadow-lg  m-20 p-10 ">
       <ResponsiveContainer width="95%" height={400}>
         <h4 className="pl-15 pb-1 m-1 font-bold text-lg">Performance</h4>
         <AreaChart

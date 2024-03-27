@@ -34,8 +34,8 @@ const Data = [
 const SingleCard = ({ heading, value, profit, loss, info }) => {
   // const { user } = useContext(UserContext);
   return (
-    <div className="w-64 h-40 m-2 p-4 shadow-lg bg-white">
-      <h2 className="font-bold text-base">{heading}</h2>
+    <div className="w-64 h-40 m-20  p-15  shadow-lg bg-white">
+      <h2 className="font-bold text-base text-gray-500">{heading}</h2>
       <h3 className="font-bold text-2xl pb-7">{value}</h3>
       <div className="flex flex-wrap">
         {profit > 0 && (
@@ -56,7 +56,7 @@ export default function Card() {
   return (
     <div className="flex flex-wrap">
       {Data.map((data) => {
-        return <SingleCard {...data} />;
+        return <SingleCard {...data} key={data.heading} />;
       })}
     </div>
   );

@@ -1,13 +1,14 @@
+import search from "../assets/img/search.png";
+
 const InputSearch = () => {
   return (
-    <div className="py-10 h-28 max-2xl p-2">
-      <div className="mb-4 flex w-full flex-wrap items-stretch">
+    <div className="w-4/5 h-10  mt-10 bg-white rounded-md border border-gray-200 justify-start items-center gap-2 inline-flex">
+      <div className="grow shrink basis-0 h-[22px] justify-start items-center gap-2 flex">
+        <img className="w-4 h-3" src={search} alt="" />
         <input
-          type="search"
-          className="focus:bg-grey-100 p-1 m-2 "
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="button-addon2"
+          className="w-full grow  shrink basis-0 text-neutral-400 text-sm font-normal font-['Inter'] leading-snug"
+          placeholder="Search ..."
+          type="text"
         />
       </div>
     </div>

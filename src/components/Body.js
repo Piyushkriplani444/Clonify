@@ -1,14 +1,15 @@
 import Card from "./Cards";
 import PerformanceChart from "./PerformanceChart";
-import InstalledApp from "./InstalledApp";
-
+import Table from "./Table";
+import Add from "./Add";
 const Body = () => {
   return (
-    <div>
+    <>
+      <Add />
       <Card />
       <PerformanceChart />
-      <InstalledApp />
-    </div>
+      <Table />
+    </>
   );
 };
 
